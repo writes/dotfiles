@@ -5,16 +5,22 @@ Various dotfiles that I want to follow me around between machines
 
 .vimrc file based on Josh's Dotfile @ https://github.com/sivad77/dotfiles
 
-#Installation 
+##Installation 
 
-##clode the repo: 
-{code}
+####clone the repo: 
+```
 git clone https://github.com/SyntaxStacks/dotfiles.git
-{code}
+```
 
-##run setup.sh
-{code}
+####run setup.sh
+```
 ./setup.sh
-{code}
+```
 
-#START DEVING
+
+
+
+
+
+
+#######START DEVING
