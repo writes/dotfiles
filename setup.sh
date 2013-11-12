@@ -1,6 +1,6 @@
-find . -name "*.x" | while read FILENAME; do 
+find ./dotfiles -name "*.x" | while read FILENAME; do 
 	FILE=$(basename ${FILENAME%.*}); 
 	DIR=$( cd "$( dirname "${FILE}" )" && pwd )
-	#echo "$DIR/$FILE";
-	eval "ln -s $DIR/$FILE.x ~/$FILE";
+	eval "rm ~/$FILE";
+	eval "ln -s $DIR/dotfiles/$FILE.x ~/$FILE";
 done
