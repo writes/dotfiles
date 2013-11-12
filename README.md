@@ -7,14 +7,20 @@ Various dotfiles that I want to follow me around between machines
 
 #Installation 
 
-##clode the repo: 
+clone the repo: 
 {code}
 git clone https://github.com/SyntaxStacks/dotfiles.git
 {code}
 
-##run setup.sh
+run setup.sh
 {code}
 ./setup.sh
 {code}
+
+
+
+
+
+
 
 #START DEVING
