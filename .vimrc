@@ -79,11 +79,18 @@ let mapleader = "t"
 nmap <Leader>g :tabp<CR>
 nmap , <C-w>w
 
-function! TestThisLine()
+function! TestThisLine(debug)
 	let test = matchstr(getline('.'), "\'.*\'")
-	execute "! mocha -g " . test
+	if a:debug
+		execute "! DEBUG=1 mocha -g " . test
+	else 
+		execute "! mocha -g " . test
+	endif
 endfunction
 
 let mapleader = "m"
-nmap <Leader>n :call TestThisLine()<CR>
+nmap <Leader>n :call TestThisLine(0)<CR>
+
+let mapleader = "m"
+nmap <Leader>d :call TestThisLine(1)<CR>
 
