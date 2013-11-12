@@ -14,7 +14,7 @@ git clone https://github.com/SyntaxStacks/dotfiles.git
 
 ####run setup.sh
 ```
-./setup.sh
+cd ./dotfiles && ./setup.sh
 ```
 
 
