@@ -88,9 +88,29 @@ function! TestThisLine(debug)
 	endif
 endfunction
 
+function! TestThisFile()
+	let test = expand('%:p') 
+	execute "! mocha " . test
+endfunction
+
 let mapleader = "m"
 nmap <Leader>n :call TestThisLine(0)<CR>
 
 let mapleader = "m"
 nmap <Leader>d :call TestThisLine(1)<CR>
 
+let mapleader = "m"
+nmap <Leader>f :call TestThisFile()<CR>
+
+
+
+set nocompatible              " be iMproved
+filetype off                  " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+
+Bundle 'tpope/vim-commentary'
+
+filetype on
