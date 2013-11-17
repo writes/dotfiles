@@ -112,5 +112,6 @@ call vundle#rc()
 
 
 Bundle 'tpope/vim-commentary'
+Bundle 'godlygeek/tabular'
 
 filetype on
