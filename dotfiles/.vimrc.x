@@ -111,7 +111,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 
+Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-commentary'
 Bundle 'godlygeek/tabular'
-
 filetype on
