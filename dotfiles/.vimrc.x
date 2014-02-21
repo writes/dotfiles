@@ -93,6 +93,32 @@ function! TestThisFile()
 	execute "! mocha " . test
 endfunction
 
+function! s:get_visual_selection()
+  " Why is this not a built-in Vim script function?!
+  let [lnum1, col1] = getpos("'<")[1:2]
+  let [lnum2, col2] = getpos("'>")[1:2]
+  let lines = getline(lnum1, lnum2)
+  let lines[-1] = lines[-1][: col2 - (&selection == 'inclusive' ? 1 : 2)]
+  let lines[0] = lines[0][col1 - 1:]
+  return join(lines, "\n")
+endfunction
+
+function! PostThisGist()
+  call inputsave()
+  let filename = input('Enter Filename: ')
+	call inputrestore()
+
+  call inputsave()
+  let desc = input('Enter Description: ')
+	call inputrestore()
+  
+	let body = s:get_visual_selection()
+	let data = "{\"description\": \"" . desc . "\", \"public\": true, \"files\": {\"" . filename . "\": {\"content\": \"working\"}}}"
+	let cmd = "curl -X POST https://api.github.com/gists -d". data . 
+
+  execute '!echo ' . cmd 
+endfunction
+
 let mapleader = "m"
 nmap <Leader>n :call TestThisLine(0)<CR>
 
@@ -101,6 +127,9 @@ nmap <Leader>d :call TestThisLine(1)<CR>
 
 let mapleader = "m"
 nmap <Leader>f :call TestThisFile()<CR>
+vmap <Leader>g :call PostThisGist()<CR>
+
+
 
 
 
