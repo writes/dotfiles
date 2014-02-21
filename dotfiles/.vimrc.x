@@ -12,24 +12,18 @@ set hlsearch                               " Highlight searches by default
 set ruler                                  " Show ruler
 set number                                 " Show line numbers
 set vb t_vb=                               " Turn off bell
-" set mouse=a                                " Enable the mouse
-" set linespace=2                            " Spacing between lines
 set noswapfile                             " Disable creation of *.swp files
 set t_Co=256                               " Support for xterm with 256 colors (gets overriden in .gvimrc)
 set ignorecase                             " Ignore case by default when searching
 set smartcase                              " Switch to case sensitive mode if needle contains uppercase characters
 set modelines=1
-" set noesckeys                              " Remove <Esc> delay in Terminal Vim (also disables arrow keys in insert mode, meh)
 
 " Indentation
+set expandtab
 set shiftwidth=2                           " Number of spaces to use in each autoindent step
-set tabstop=2                              " Two tab spaces
-set softtabstop=2                          " Number of spaces to skip or insert when <BS>ing or <Tab>ing
-" set expandtab                              " Spaces instead of tabs for better cross-editor compatibility
-set autoindent                             " Keep the indent when creating a new line
-set smarttab                               " Use shiftwidth and softtabstop to insert or delete (on <BS>) blanks
-set cindent                                " Recommended seting for automatic C-style indentation
-set autoindent                             " Automatic indentation in non-C files
+set tabstop=2                              " Two tab space
+set autoindent
+set smartindent
 
 " Wrap
 set nowrap                                 " I don't always wrap lines...
@@ -40,7 +34,6 @@ set switchbuf=useopen                      " Don't re-open already opened buffer
 
 " Moving around / editing
 set nostartofline                          " Avoid moving cursor to BOL when jumping around
-" set virtualedit=all                        " Let cursor move past the last char
 set scrolloff=3                            " Keep 3 context lines above and below the cursor
 set backspace=2                            " Allow backspacing over autoindent, EOL, and BOL
 set showmatch                              " Briefly jump to a paren once it's balanced
