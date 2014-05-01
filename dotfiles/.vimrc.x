@@ -21,7 +21,7 @@ set modelines=1
 " Indentation
 set expandtab
 set shiftwidth=2                           " Number of spaces to use in each autoindent step
-set tabstop=2                              " Two tab space
+set tabstop=4                              " given into the 4 space tab master race -.-
 set autoindent
 set smartindent
 
@@ -132,8 +132,15 @@ filetype off                  " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" let g:snippets_dir = '~/code/dotfiles/vim/snippets' 
+let g:snipMate = {} 
+let g:snipMate.scope_aliases = {} 
+let g:snipMate.scope_aliases['javascript']  = 'javascript/javascript, javascript/javascript-astrolabe'
 
+filetype on
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-commentary'
 Bundle 'godlygeek/tabular'
-filetype on
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
