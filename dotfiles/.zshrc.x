@@ -47,3 +47,6 @@ source ~/.bashrc
 
 # Customize to your needs...
 export PATH=./bin:$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+
+# bind ctrl+u to delete behind cursor, not the entire line
+bindkey \^U backward-kill-line
