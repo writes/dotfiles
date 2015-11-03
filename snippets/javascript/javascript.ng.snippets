@@ -1,0 +1,41 @@
+#beforeEach
+snippet beinj
+	beforeEach(inject(function (${1}) {
+		${0}
+	}));
+
+#beforeEach ng module loader
+snippet bem
+	beforeEach(module(${0}));
+
+#angular.module
+snippet angmod
+	angular.module('${0}')
+
+#directive
+snippet .dir
+	.directive('${1}', [${2}function (${3}) {
+		${0}
+	}]);
+
+#factory
+snippet .fac
+	.factory('${1}', [${2}function (${3}) {
+		${0}
+	}]);
+
+#service
+snippet .ser
+	.service('${1}', [${2}function (${3}) {
+		this.$get = function () {
+			${0}
+		};
+	}]);
+
+#provider
+snippet .pro
+	.provider('${1}', function (${2}) {
+		this.$get = function () {
+			${0}
+		};
+	});

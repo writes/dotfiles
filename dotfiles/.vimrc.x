@@ -21,7 +21,7 @@ set modelines=1
 " Indentation
 set expandtab
 set shiftwidth=2                           " Number of spaces to use in each autoindent step
-set tabstop=4                              " given into the 4 space tab master race -.-
+set tabstop=2                              " given into the 4 space tab master race -.-
 set autoindent
 set smartindent
 
@@ -53,6 +53,9 @@ augroup resCur
   autocmd!
   autocmd BufWinEnter * call ResCur()
 augroup END
+
+" Remove whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
 
 " Persistent Undo
 set undodir=$HOME/.vim/undodir
@@ -86,6 +89,11 @@ function! TestThisFile()
 	execute "! mocha " . test
 endfunction
 
+function! Protractor()
+	let test = expand('%:p') 
+	execute "! protractor test/conf/protractor.midway.conf.js --specs " . test
+endfunction
+
 function! s:get_visual_selection()
   " Why is this not a built-in Vim script function?!
   let [lnum1, col1] = getpos("'<")[1:2]
@@ -115,11 +123,10 @@ endfunction
 let mapleader = "m"
 nmap <Leader>n :call TestThisLine(0)<CR>
 
-let mapleader = "m"
 nmap <Leader>d :call TestThisLine(1)<CR>
 
-let mapleader = "m"
 nmap <Leader>f :call TestThisFile()<CR>
+nmap <Leader>p :call Protractor()<CR>
 vmap <Leader>g :call PostThisGist()<CR>
 
 

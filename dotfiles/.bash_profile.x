@@ -22,3 +22,7 @@ export PATH=$HOME/local/bin:$PATH
 export DOCKER_HOST=tcp://localhost:4243
 # added by Anaconda 1.9.2 installer
 export PATH="/Users/john7352/anaconda/bin:$PATH"
+export PATH=/usr/local/bin:$PATH
+
+# added by Anaconda 2.2.0 installer
+export PATH="/Users/john7352/anaconda/bin:$PATH"

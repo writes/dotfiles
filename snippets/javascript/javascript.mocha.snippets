@@ -1,0 +1,27 @@
+#it block
+snippet it
+	it('${1:should}', function () {
+	    ${0}
+	});
+
+#it w/o the function
+snippet it(
+	it('${1:should}');
+
+#describe block
+snippet desc
+	describe('${1}', function () {
+	    ${0}
+	});
+
+#describe test block
+snippet desct
+	describe.only('test', function () {
+	    ${0}
+	});
+
+#beforeEach
+snippet be
+	beforeEach(function () {
+		${0}
+	});
