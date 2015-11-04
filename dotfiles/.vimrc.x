@@ -1,5 +1,6 @@
 syntax on                                  " Turn on syntax highlighting
 filetype plugin indent on                  " Enable automatic filetype detection, filetype-specific plugins/indentation
+set encoding=utf8
 set nocompatible                           " Don't need to keep compatibility with Vi
 set hidden                                 " Allow hiding buffers with unsaved changes
 set nolist                                 " Hide invisibles by default
@@ -79,18 +80,18 @@ function! TestThisLine(debug)
 	let test = matchstr(getline('.'), "\'.*\'")
 	if a:debug
 		execute "! DEBUG=1 mocha -g " . test
-	else 
+	else
 		execute "! mocha -g " . test
 	endif
 endfunction
 
 function! TestThisFile()
-	let test = expand('%:p') 
+	let test = expand('%:p')
 	execute "! mocha " . test
 endfunction
 
 function! Protractor()
-	let test = expand('%:p') 
+	let test = expand('%:p')
 	execute "! protractor test/conf/protractor.midway.conf.js --specs " . test
 endfunction
 
@@ -112,14 +113,23 @@ function! PostThisGist()
   call inputsave()
   let desc = input('Enter Description: ')
 	call inputrestore()
-  
+
 	let body = s:get_visual_selection()
 	let data = "{\"description\": \"" . desc . "\", \"public\": true, \"files\": {\"" . filename . "\": {\"content\": \"working\"}}}"
-	let cmd = "curl -X POST https://api.github.com/gists -d". data . 
+	let cmd = "curl -X POST https://api.github.com/gists -d". data .
 
-  execute '!echo ' . cmd 
+  execute '!echo ' . cmd
 endfunction
 
+" NerdTree Config
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" close vim if last window in nerd tree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+
+map <C-n> :NERDTreeToggle<CR>
 let mapleader = "m"
 nmap <Leader>n :call TestThisLine(0)<CR>
 
@@ -137,17 +147,25 @@ set nocompatible              " be iMproved
 filetype off                  " required!
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
-
-" let g:snippets_dir = '~/code/dotfiles/vim/snippets' 
-let g:snipMate = {} 
-let g:snipMate.scope_aliases = {} 
-let g:snipMate.scope_aliases['javascript']  = 'javascript/javascript, javascript/javascript-astrolabe'
-
-filetype on
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'godlygeek/tabular'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
+Plugin 'scrooloose/nerdtree'
+call vundle#end()
+
+" let g:snippets_dir = '~/code/dotfiles/vim/snippets'
+let g:snipMate = {}
+let g:snipMate.scope_aliases = {}
+let g:snipMate.scope_aliases['javascript']  = 'javascript/javascript, javascript/javascript-astrolabe'
+
+" Nerd Tree Arrows
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+filetype on
