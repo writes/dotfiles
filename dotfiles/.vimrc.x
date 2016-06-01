@@ -155,7 +155,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
-Plugin 'scrooloose/nerdtree'
+Plugin 'lambdatoast/elm.vim'
 call vundle#end()
 
 " let g:snippets_dir = '~/code/dotfiles/vim/snippets'
