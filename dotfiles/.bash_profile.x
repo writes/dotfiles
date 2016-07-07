@@ -20,15 +20,3 @@ export LC_CTYPE=C
 export LANG=C
 export PATH=$HOME/local/bin:$PATH
 export DOCKER_HOST=tcp://localhost:4243
-# added by Anaconda 1.9.2 installer
-export PATH="/Users/john7352/anaconda/bin:$PATH"
-export PATH=/usr/local/bin:$PATH
-
-# added by Anaconda 2.2.0 installer
-export PATH="/Users/john7352/anaconda/bin:$PATH"
-
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
-
-[[ -s "$HOME/.bashrc" ]] && source "$HOME/.bashrc" # Load the default .bashrc
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
