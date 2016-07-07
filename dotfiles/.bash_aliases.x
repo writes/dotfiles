@@ -1,8 +1,3 @@
-# added by Anaconda 2.1.0 installer
-export PATH="/Users/jona8578/anaconda/bin:$PATH"
-
-export PATH=${PATH}:/usr/local/mysql/bin
-
 export TERM="xterm-256color"
 
 alias r8000="lsof -i TCP:8000"
