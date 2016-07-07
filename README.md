@@ -3,13 +3,13 @@ dotfiles
 
 Various dotfiles that I want to follow me around between machines
 
-.vimrc file based on Josh's Dotfile @ https://github.com/sivad77/dotfiles
+.vimrc file based on John's Dotfile @ https://github.com/SyntaxStacks/dotfiles.git
 
-##Installation 
+##Installation
 
-####clone the repo: 
+####clone the repo:
 ```
-git clone https://github.com/SyntaxStacks/dotfiles.git
+git clone https://github.com/writes/dotfiles.git
 ```
 
 ####run setup.sh
