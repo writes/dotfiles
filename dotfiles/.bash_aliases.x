@@ -13,6 +13,7 @@ alias ll="ls -laG"
 alias jj="cd ~/Projects/www/build/profiles/www"
 alias kk="cd ~/Projects/www/src"
 alias zz="cd ~/Projects/zoolander"
+alias tco="cd ~/Projects/tco"
 alias x="exit"
 alias c="clear"
 alias k="kill -9 %1"
@@ -22,3 +23,6 @@ alias :E="vim -c Explore"
 alias nw="cd ~/Projects/nightwatch"
 alias selenium up="java -jar bin/selenium-server-standalone-2.47.1.jar"
 alias plumb="cd ~/Web/shiny-invention"
+
+#grep alias
+function search { grep --color "$1" -rn ./ ; }

@@ -1,4 +1,5 @@
 syntax on                                  " Turn on syntax highlighting
+au BufNewFile,BufRead *.ejs set filetype=html "Syntax highlighting for ejs
 filetype plugin indent on                  " Enable automatic filetype detection, filetype-specific plugins/indentation
 set encoding=utf8
 set nocompatible                           " Don't need to keep compatibility with Vi
@@ -27,7 +28,7 @@ set autoindent
 set smartindent
 
 " Wrap
-set nowrap                                 " I don't always wrap lines...
+" set nowrap                                I don't always wrap lines...
 set linebreak                              " ...but when I do, I wrap whole words
 set wildmenu                               " Make tab completion act more like bash
 set wildmode=list:longest                  " Tab complete to longest common string, like bash
@@ -41,7 +42,7 @@ set showmatch                              " Briefly jump to a paren once it's b
 set matchtime=2                            " (for only .2 seconds).
 
 " Remember cursor position
-set viminfo='10,\"100,:20,%,n~/.viminfo
+" set viminfo='10,\"100,:20,%,n~/.viminfo
 
 function! ResCur()
   if line("'\"") <= line("$")
@@ -158,14 +159,14 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'lambdatoast/elm.vim'
 call vundle#end()
 
-" let g:snippets_dir = '~/code/dotfiles/vim/snippets'
+let g:snippets_dir = '~/code/dotfiles/vim/snippets'
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['javascript']  = 'javascript/javascript, javascript/javascript-astrolabe'
 
 " Nerd Tree Arrows
-let g:NERDTreeDirArrows = 1
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
+" let g:NERDTreeDirArrows = 1
+" let g:NERDTreeDirArrowExpandable = '▸'
+" let g:NERDTreeDirArrowCollapsible = '▾'
 
 filetype on

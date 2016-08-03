@@ -25,7 +25,7 @@ bind - split-window -v
 unbind '"'
 unbind %
 
-# switch panes using Alt-arrow without prefix
+# change panes using Alt-arrow without prefix
 bind -n M-Left select-pane -L
 bind -n M-Right select-pane -R
 bind -n M-Up select-pane -U
