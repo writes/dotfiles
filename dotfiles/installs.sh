@@ -1,4 +1,5 @@
 #install atom and update
+#credit to fazlearefin.blogspot.com for atom install script
 
 ATOM_INSTALLED_VERSION=$(atom --version 2>/dev/null | grep -i Atom | egrep -o '[0-9\.]+$' || echo "")
 ATOM_LATEST_VERSION=$(curl -o /dev/null --silent --head --write-out '%{redirect_url}\n' https://github.com/atom/atom/releases/latest | egrep -o '[0-9\.]+$')
