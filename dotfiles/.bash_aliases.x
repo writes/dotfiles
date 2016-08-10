@@ -6,6 +6,8 @@ alias r8001="lsof -i TCP:8001"
 alias r9000="lsof -i TCP:9000"
 alias r9001="lsof -i TCP:9001"
 alias r7080="lsof -i TCP:7080"
+alias a="cd ~/Projects"
+alias s="cd ~/Writes"
 alias ss="cd ~/Projects/signups-ui"
 alias style="cd ~/Projects/www/build/profiles/www/build/profiles/www/styleguide"
 alias cc="cd ~/Projects/calculator"
@@ -22,7 +24,9 @@ alias :E="vim -c Explore"
 #alias tmux="tmux -2"
 alias nw="cd ~/Projects/nightwatch"
 alias selenium up="java -jar bin/selenium-server-standalone-2.47.1.jar"
-alias plumb="cd ~/Web/shiny-invention"
+
+alias plumb="cd ~/Writes/shiny-invention"
+alias pp="cd ~/Writes/pulp-fighter"
 
 #grep alias
 function search { grep --color "$1" -rn ./ ; }
