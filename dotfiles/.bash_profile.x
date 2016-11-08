@@ -20,3 +20,13 @@ export LC_CTYPE=C
 export LANG=C
 export PATH=$HOME/local/bin:$PATH
 export DOCKER_HOST=tcp://localhost:4243
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.100:2376"
+export DOCKER_CERT_PATH="/Users/jona8578/.docker/machine/machines/default"
+export DOCKER_MACHINE_NAME="default"
+# Run this command to configure your shell:
+# eval $(docker-machine env default)
+
+# update ruby path
+# PATH=$GEM_HOME/bin:$GEM_HOME/wrappers:$PATH
+eval "$(rbenv init -)"
