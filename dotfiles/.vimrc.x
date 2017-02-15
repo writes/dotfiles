@@ -1,6 +1,8 @@
-syntax on                                  " Turn on syntax highlighting
+colo luna
+if has("termguicolors")
+    set termguicolors
+endif
 au BufNewFile,BufRead *.ejs set filetype=html "Syntax highlighting for ejs
-filetype plugin indent on                  " Enable automatic filetype detection, filetype-specific plugins/indentation
 set encoding=utf8
 set nocompatible                           " Don't need to keep compatibility with Vi
 set hidden                                 " Allow hiding buffers with unsaved changes
@@ -19,6 +21,7 @@ set t_Co=256                               " Support for xterm with 256 colors (
 set ignorecase                             " Ignore case by default when searching
 set smartcase                              " Switch to case sensitive mode if needle contains uppercase characters
 set modelines=1
+set nocp
 
 " Indentation
 set expandtab
@@ -41,21 +44,6 @@ set backspace=2                            " Allow backspacing over autoindent, 
 set showmatch                              " Briefly jump to a paren once it's balanced
 set matchtime=2                            " (for only .2 seconds).
 
-" Remember cursor position
-" set viminfo='10,\"100,:20,%,n~/.viminfo
-
-function! ResCur()
-  if line("'\"") <= line("$")
-    normal! g`"
-    return 1
-  endif
-endfunction
-
-augroup resCur
-  autocmd!
-  autocmd BufWinEnter * call ResCur()
-augroup END
-
 " Remove whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -77,51 +65,6 @@ let mapleader = "t"
 nmap <Leader>g :tabp<CR>
 nmap , <C-w>w
 
-function! TestThisLine(debug)
-	let test = matchstr(getline('.'), "\'.*\'")
-	if a:debug
-		execute "! DEBUG=1 mocha -g " . test
-	else
-		execute "! mocha -g " . test
-	endif
-endfunction
-
-function! TestThisFile()
-	let test = expand('%:p')
-	execute "! mocha " . test
-endfunction
-
-function! Protractor()
-	let test = expand('%:p')
-	execute "! protractor test/conf/protractor.midway.conf.js --specs " . test
-endfunction
-
-function! s:get_visual_selection()
-  " Why is this not a built-in Vim script function?!
-  let [lnum1, col1] = getpos("'<")[1:2]
-  let [lnum2, col2] = getpos("'>")[1:2]
-  let lines = getline(lnum1, lnum2)
-  let lines[-1] = lines[-1][: col2 - (&selection == 'inclusive' ? 1 : 2)]
-  let lines[0] = lines[0][col1 - 1:]
-  return join(lines, "\n")
-endfunction
-
-function! PostThisGist()
-  call inputsave()
-  let filename = input('Enter Filename: ')
-	call inputrestore()
-
-  call inputsave()
-  let desc = input('Enter Description: ')
-	call inputrestore()
-
-	let body = s:get_visual_selection()
-	let data = "{\"description\": \"" . desc . "\", \"public\": true, \"files\": {\"" . filename . "\": {\"content\": \"working\"}}}"
-	let cmd = "curl -X POST https://api.github.com/gists -d". data .
-
-  execute '!echo ' . cmd
-endfunction
-
 " NerdTree Config
 " autocmd StdinReadPre * let s:std_in=1
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -140,14 +83,11 @@ nmap <Leader>f :call TestThisFile()<CR>
 nmap <Leader>p :call Protractor()<CR>
 vmap <Leader>g :call PostThisGist()<CR>
 
-
-
-
-
 set nocompatible              " be iMproved
 filetype off                  " required!
+filetype plugin indent off
 
-set rtp+=~/.vim/bundle/Vundle.vim
+set runtimepath^=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
@@ -157,6 +97,9 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'lambdatoast/elm.vim'
+Plugin 'vim-scripts/MPage'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'flazz/vim-colorschemes'
 call vundle#end()
 
 let g:snippets_dir = '~/code/dotfiles/vim/snippets'
@@ -169,4 +112,5 @@ let g:snipMate.scope_aliases['javascript']  = 'javascript/javascript, javascript
 " let g:NERDTreeDirArrowExpandable = '▸'
 " let g:NERDTreeDirArrowCollapsible = '▾'
 
-filetype on
+filetype plugin indent on                  " Enable automatic filetype detection, filetype-specific plugins/indentation
+syntax on                                  "Turn on syntax highlighting

@@ -30,3 +30,7 @@ export DOCKER_MACHINE_NAME="default"
 # update ruby path
 # PATH=$GEM_HOME/bin:$GEM_HOME/wrappers:$PATH
 eval "$(rbenv init -)"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+source ~/.profile

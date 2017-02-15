@@ -50,3 +50,5 @@ export PATH=./bin:$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bi
 
 # bind ctrl+u to delete behind cursor, not the entire line
 bindkey \^U backward-kill-line
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
