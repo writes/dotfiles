@@ -1,5 +1,7 @@
 export TERM="xterm-256color"
 
+alias dot="cd ~/dotfiles/dotfiles"
+
 # Universal
 alias x="exit"
 alias c="clear"
@@ -19,11 +21,8 @@ alias a="cd ~/Projects"
 alias s="cd ~/Writes"
 
 # Writes
-alias plumb="cd ~/Writes/shiny-invention"
-alias aa="cd ~/Writes/psychic-system"
-alias tt="cd ~/Writes/teez"
 
-# Rackspace specific
+# Rackspace
 alias ss="cd ~/Projects/signups-ui"
 alias cc="cd ~/Projects/calculator"
 alias jj="cd ~/Projects/www/build/profiles/www"
