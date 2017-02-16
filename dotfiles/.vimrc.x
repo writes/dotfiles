@@ -1,4 +1,9 @@
-colo luna
+"colo luna
+"colo codeschool
+"colo distinguished
+colo atom
+set background=dark
+
 if has("termguicolors")
     set termguicolors
 endif
@@ -97,10 +102,17 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'lambdatoast/elm.vim'
-Plugin 'vim-scripts/MPage'
-Plugin 'easymotion/vim-easymotion'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'Raimondi/delimitMate'
+Plugin 'scrooloose/syntastic'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
 call vundle#end()
+
+" This does what it says on the tin. It will check your file on open too, not just on save.
+" You might not want this, so just leave it out if you don't.
+" let g:syntastic_check_on_open=1
 
 let g:snippets_dir = '~/code/dotfiles/vim/snippets'
 let g:snipMate = {}
