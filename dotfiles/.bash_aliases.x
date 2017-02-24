@@ -11,12 +11,6 @@ alias :E="vim -c Explore"
 alias less="less -cemiq"
 #alias tmux="tmux -2"
 alias selenium up="java -jar bin/selenium-server-standalone-2.47.1.jar"
-alias r8000="lsof -i TCP:8000"
-alias r8080="lsof -i TCP:8080"
-alias r8001="lsof -i TCP:8001"
-alias r9000="lsof -i TCP:9000"
-alias r9001="lsof -i TCP:9001"
-alias r7080="lsof -i TCP:7080"
 alias a="cd ~/Projects"
 alias s="cd ~/Writes"
 
@@ -35,3 +29,4 @@ alias tests="cd ~/Projects/tests"
 #grep alias
 function search { grep "$1" -rl ./ ; }
 function searchf { grep --color "$1" -rn ./ ; }
+function r { lsof -i TCP:$1 ; }
