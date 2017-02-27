@@ -126,3 +126,6 @@ let g:snipMate.scope_aliases['javascript']  = 'javascript/javascript, javascript
 
 filetype plugin indent on                  " Enable automatic filetype detection, filetype-specific plugins/indentation
 syntax on                                  "Turn on syntax highlighting
+
+" Fix Ambiguous E
+command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
