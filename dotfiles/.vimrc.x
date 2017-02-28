@@ -1,13 +1,13 @@
-"colo luna
-"colo codeschool
-"colo distinguished
+" colo luna
+" colo codeschool
+" colo distinguished
 colo atom
 set background=dark
 
 if has("termguicolors")
     set termguicolors
 endif
-au BufNewFile,BufRead *.ejs set filetype=html "Syntax highlighting for ejs
+au BufNewFile,BufRead *.ejs set filetype=html " Syntax highlighting for ejs
 set encoding=utf8
 set nocompatible                           " Don't need to keep compatibility with Vi
 set hidden                                 " Allow hiding buffers with unsaved changes
@@ -49,6 +49,7 @@ set scrolloff=3                            " Keep 3 context lines above and belo
 set backspace=2                            " Allow backspacing over autoindent, EOL, and BOL
 set showmatch                              " Briefly jump to a paren once it's balanced
 set matchtime=2                            " (for only .2 seconds).
+xnoremap p pgvy                            " Persistant clipboard
 
 " Remove whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e

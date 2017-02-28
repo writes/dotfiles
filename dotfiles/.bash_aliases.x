@@ -1,20 +1,13 @@
 export TERM="xterm-256color"
 
-alias dot="cd ~/dotfiles/dotfiles"
-
-# Universal
-alias x="exit"
+# Writes
+alias a="cd ~/Projects"
 alias c="clear"
+alias dot="cd ~/dotfiles/dotfiles"
 alias k="kill -9 %1"
 alias ll="ls -laG"
-alias :E="vim -c Explore"
-alias less="less -cemiq"
-#alias tmux="tmux -2"
-alias selenium up="java -jar bin/selenium-server-standalone-2.47.1.jar"
-alias a="cd ~/Projects"
 alias s="cd ~/Writes"
-
-# Writes
+alias x="exit"
 
 # Rackspace
 alias ss="cd ~/Projects/signups-ui"
@@ -26,7 +19,21 @@ alias tco="cd ~/Projects/tco"
 alias rr="cd ~/Projects/rackspace-js-lib"
 alias tests="cd ~/Projects/tests"
 
-#grep alias
+# Variabled aliases
+# grep
 function search { grep "$1" -rl ./ ; }
 function searchf { grep --color "$1" -rn ./ ; }
+
+# vim
+alias :E="vim -c Explore"
+
+# tmux
+alias td="tmux detach"
+function tks { tmux kill-session -t $1 ; }
+function trw { tmux rename-window $1 }
+function tas { tmux attach-session -t $1 }
+
+# search running port number
 function r { lsof -i TCP:$1 ; }
+
+
