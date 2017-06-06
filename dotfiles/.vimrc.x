@@ -5,9 +5,6 @@
 "set background=dark
 colo cobalt2
 
-if has("termguicolors")
-    set termguicolors
-endif
 au BufNewFile,BufRead *.ejs set filetype=html " Syntax highlighting for ejs
 set encoding=utf8
 set nocompatible                           " Don't need to keep compatibility with Vi
@@ -23,7 +20,6 @@ set ruler                                  " Show ruler
 set number                                 " Show line numbers
 set vb t_vb=                               " Turn off bell
 set noswapfile                             " Disable creation of *.swp files
-set t_Co=256                               " Support for xterm with 256 colors (gets overriden in .gvimrc)
 set t_ut=                                  " Fix for overflow issue vim background in tmux
 set ignorecase                             " Ignore case by default when searching
 set smartcase                              " Switch to case sensitive mode if needle contains uppercase characters

@@ -29,6 +29,7 @@ alias :E="vim -c Explore"
 
 # tmux
 alias td="tmux detach"
+alias tmux="tmux -2"
 function tks { tmux kill-session -t $1 ; }
 function trw { tmux rename-window $1 }
 function tas { tmux attach-session -t $1 }

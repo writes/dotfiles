@@ -36,3 +36,5 @@ eval "$(rbenv init -)"
 source ~/.profile
 
 export PATH="$PATH:/Applications/DevDesktop/tools"
+
+TERM=xterm-256color
