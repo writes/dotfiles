@@ -8,7 +8,7 @@ alias k="kill -9 %1"
 alias ll="ls -laG"
 alias s="cd ~/Writes"
 alias x="exit"
-
+alias drupal="cd ~/Writes/some-dir/docroot"
 # Rackspace
 alias ss="cd ~/Projects/signups-ui"
 alias cc="cd ~/Projects/calculator"
