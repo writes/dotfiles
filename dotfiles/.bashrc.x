@@ -1,6 +1,8 @@
 source ~/.bash_profile
-PATH=$PATH:$HOME/.rvm/bin
+export NODE_PATH='/usr/local/lib/node_modules'
+
 # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin
 
 #function sedReplace () {
 #  if [ -z "$1" ] || [ -z "$2" ]
@@ -28,3 +30,5 @@ PATH=$PATH:$HOME/.rvm/bin
 #    | grep -Eo \"((?:DCXAPPS|EN)[-]\d+)\" | sort | uniq"
 #}
 
+
+export PATH="$PATH:/Applications/DevDesktop/tools"

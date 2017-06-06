@@ -1,8 +1,9 @@
 " colo luna
 " colo codeschool
 " colo distinguished
-colo atom
-set background=dark
+"colo atom
+"set background=dark
+colo cobalt2
 
 if has("termguicolors")
     set termguicolors
@@ -73,11 +74,11 @@ nmap <Leader>g :tabp<CR>
 nmap , <C-w>w
 
 " NerdTree Config
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " close vim if last window in nerd tree
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 
 map <C-n> :NERDTreeToggle<CR>
@@ -107,9 +108,12 @@ Plugin 'lambdatoast/elm.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'Valloric/MatchTagAlways'
 call vundle#end()
 
 " This does what it says on the tin. It will check your file on open too, not just on save.
@@ -122,10 +126,10 @@ call vundle#end()
 " let g:snipMate.scope_aliases['javascript']  = 'javascript/javascript, javascript/javascript-astrolabe'
 
 " Nerd Tree Arrows
-" let g:NERDTreeDirArrows = 1
-" let g:NERDTreeDirArrowExpandable = '▸'
-" let g:NERDTreeDirArrowCollapsible = '▾'
-
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let NERDTreeShowHidden=1
 filetype plugin indent on                  " Enable automatic filetype detection, filetype-specific plugins/indentation
 syntax on                                  "Turn on syntax highlighting
 
