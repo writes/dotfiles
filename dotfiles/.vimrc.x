@@ -5,13 +5,11 @@
 "set background=dark
 colo cobalt2
 
-au BufNewFile,BufRead *.ejs set filetype=html " Syntax highlighting for ejs
 set encoding=utf8
 set nocompatible                           " Don't need to keep compatibility with Vi
 set hidden                                 " Allow hiding buffers with unsaved changes
 set nolist                                 " Hide invisibles by default
 set showcmd                                " Show incomplete cmds down the bottom
-set showmode                               " Show current mode down the bottom
 set cmdheight=2                            " Make the command line a little taller
 set ttyfast                                " More smooth screen redrawing
 set incsearch                              " Find the next match as we type the search
@@ -25,6 +23,11 @@ set ignorecase                             " Ignore case by default when searchi
 set smartcase                              " Switch to case sensitive mode if needle contains uppercase characters
 set modelines=1
 set nocp
+
+" Brought in by rec from Powerline"
+set laststatus=2 " Always display the statusline in all windows
+set showtabline=2 " Always display the tabline, even if there is only one tab
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
 " Indentation
 set expandtab
@@ -131,3 +134,6 @@ syntax on                                  "Turn on syntax highlighting
 
 " Fix Ambiguous E
 command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
+
+
+au BufNewFile,BufRead *.ejs set filetype=html " Syntax highlighting for ejs

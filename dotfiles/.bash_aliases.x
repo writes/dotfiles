@@ -18,6 +18,7 @@ alias zz="cd ~/Projects/zoolander"
 alias tco="cd ~/Projects/tco"
 alias rr="cd ~/Projects/rackspace-js-lib"
 alias tests="cd ~/Projects/tests"
+alias prices="cd ~/Projects/prices"
 
 # Variabled aliases
 # grep
@@ -28,11 +29,14 @@ function searchf { grep --color "$1" -rn ./ ; }
 alias :E="vim -c Explore"
 
 # tmux
-alias td="tmux detach"
 alias tmux="tmux -2"
-function tks { tmux kill-session -t $1 ; }
-function trw { tmux rename-window $1 }
-function tas { tmux attach-session -t $1 }
+function tas { tmux attach-session -t $1; }
+alias tds="tmux detach"
+alias tls="tmux ls"
+function tns { tmux new -s $1; }
+function tks { tmux kill-session -t $1; }
+function trw { tmux rename-window $1; }
+
 
 # search running port number
 function r { lsof -i TCP:$1 ; }
