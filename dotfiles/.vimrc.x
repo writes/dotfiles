@@ -96,7 +96,6 @@ filetype plugin indent off
 
 set runtimepath^=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'godlygeek/tabular'
@@ -113,6 +112,8 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'Valloric/MatchTagAlways'
+Plugin 'VundleVim/Vundle.vim'
+
 call vundle#end()
 
 " This does what it says on the tin. It will check your file on open too, not just on save.
