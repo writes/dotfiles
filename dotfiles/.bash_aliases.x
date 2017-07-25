@@ -8,7 +8,7 @@ alias k="kill -9 %1"
 alias ll="ls -laG"
 alias s="cd ~/Writes"
 alias x="exit"
-alias drupal="cd ~/Writes/some-dir/docroot"
+
 # Rackspace
 alias ss="cd ~/Projects/signups-ui"
 alias cc="cd ~/Projects/calculator"
@@ -19,11 +19,6 @@ alias tco="cd ~/Projects/tco"
 alias rr="cd ~/Projects/rackspace-js-lib"
 alias tests="cd ~/Projects/tests"
 alias prices="cd ~/Projects/prices"
-
-# Variabled aliases
-# grep
-function search { grep "$1" -rl ./ ; }
-function searchf { grep --color "$1" -rn ./ ; }
 
 # vim
 alias :E="vim -c Explore"
