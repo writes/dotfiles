@@ -4,6 +4,9 @@ export NODE_PATH='/usr/local/lib/node_modules'
 # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.rvm/bin
 
+# Require Composer
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
 #function sedReplace () {
 #  if [ -z "$1" ] || [ -z "$2" ]
 #  then
