@@ -25,3 +25,8 @@ ln -s ~/.vim/bundle/vim-colorschemes/colors ~/.vim/colors
 ```
 cd ./dotfiles && ./setup.sh
 ```
+
+#### theme repos for vim and iterm
+[https://github.com/wesbos/Cobalt2-iterm](https://github.com/wesbos/Cobalt2-iterm)
+
+[https://github.com/herrbischoff/cobalt2.vim](https://github.com/herrbischoff/cobalt2.vim)
