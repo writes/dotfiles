@@ -30,3 +30,14 @@ cd ./dotfiles && ./setup.sh
 [https://github.com/wesbos/Cobalt2-iterm](https://github.com/wesbos/Cobalt2-iterm)
 
 [https://github.com/herrbischoff/cobalt2.vim](https://github.com/herrbischoff/cobalt2.vim)
+
+### Quick links
+#### Install Homebrew
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+#### Install node
+```
+brew install node
+```
