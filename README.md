@@ -48,6 +48,8 @@ brew install node
 ```
 npm install npm@latest -g
 ```
+#### Install yarn
+[https://yarnpkg.com/lang/en/docs/install/](https://yarnpkg.com/lang/en/docs/install/)
 
 #### Node version manager (nvm)
 [https://github.com/creationix/nvm](https://github.com/creationix/nvm)
