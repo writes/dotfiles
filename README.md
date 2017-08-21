@@ -5,6 +5,9 @@ Various dotfiles that I want to follow me around between machines
 
 Based on John's Dotfile @ https://github.com/SyntaxStacks/dotfiles.git
 
+## iTerm
+[https://www.iterm2.com/downloads.html](https://www.iterm2.com/downloads.html)
+
 ## Installation
 
 #### Clone the repo:
@@ -12,32 +15,58 @@ Based on John's Dotfile @ https://github.com/SyntaxStacks/dotfiles.git
 git clone https://github.com/writes/dotfiles.git
 ```
 
-#### Create vim theme directory and create symlink
+#### Install Homebrew
 ```
-mkdir ~/.vim/colors
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+```
+export PATH=/usr/local/bin:$PATH
+```
+
+#### Install vim
+```
+brew install vim && macvim
+```
+
+```
+brew link macvim
+```
+
+#### Create directories
+```
+mkdir ~/.vim && mkdir ~/.vim/bundle && mkdir ~/.vim/colors && mkdir ~/.vim/bundle/colors && touch ~/.vimrc && touch ~/.bash_aliases && touch ~/.bashrc && touch ~/.vimrc && touch ~/.zshrc 
 ```
 
 ```
 ln -s ~/.vim/bundle/vim-colorschemes/colors ~/.vim/colors
 ```
 
-#### Run setup.sh
+#### Install tmux
+
+[https://github.com/tmux/tmux](https://github.com/tmux/tmux)
+
+#### Install rbenv
 ```
-cd ./dotfiles && ./setup.sh
+brew install rbenv
 ```
 
-#### iTerm
-[https://www.iterm2.com/downloads.html](https://www.iterm2.com/downloads.html)
+```
+rbenv init
+```
+
+#### Run setup.sh
+```
+cd ~/dotfiles && ./setup.sh
+```
+
+## Helpful links/commands
 
 #### Cobalt2 theme repos for vim and iterm
 [https://github.com/wesbos/Cobalt2-iterm](https://github.com/wesbos/Cobalt2-iterm)
 
 [https://github.com/herrbischoff/cobalt2.vim](https://github.com/herrbischoff/cobalt2.vim)
 
-#### Install Homebrew
-```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
 
 #### Install node
 ```
@@ -48,6 +77,7 @@ brew install node
 ```
 npm install npm@latest -g
 ```
+
 #### Install yarn
 [https://yarnpkg.com/lang/en/docs/install/](https://yarnpkg.com/lang/en/docs/install/)
 

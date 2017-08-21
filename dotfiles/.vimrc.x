@@ -1,9 +1,9 @@
 " colo luna
 " colo codeschool
 " colo distinguished
-"colo atom
-"set background=dark
-colo cobalt2
+" colo atom
+" set background=dark
+" colo cobalt2
 
 set encoding=utf8
 set nocompatible                           " Don't need to keep compatibility with Vi
@@ -117,24 +117,28 @@ Plugin 'VundleVim/Vundle.vim'
 call vundle#end()
 
 " This does what it says on the tin. It will check your file on open too, not just on save.
-" You might not want this, so just leave it out if you don't.
+" You might not want this, so just leave it out if you dont.
 " let g:syntastic_check_on_open=1
 
-" let g:snippets_dir = '~/code/dotfiles/vim/snippets'
-" let g:snipMate = {}
-" let g:snipMate.scope_aliases = {}
-" let g:snipMate.scope_aliases['javascript']  = 'javascript/javascript, javascript/javascript-astrolabe'
+let g:snippets_dir = '~/code/dotfiles/vim/snippets'
+let g:snipMate = {}
+let g:snipMate.scope_aliases = {}
+let g:snipMate.scope_aliases['javascript']  = 'javascript/javascript, javascript/javascript-astrolabe'
 
 " Nerd Tree Arrows
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeShowHidden=1
-filetype plugin indent on                  " Enable automatic filetype detection, filetype-specific plugins/indentation
-syntax on                                  "Turn on syntax highlighting
+
+" Enable automatic filetype detection, filetype-specific plugins/indentation
+filetype plugin indent on
+
+" Turn on syntax highlighting
+syntax on
 
 " Fix Ambiguous E
 command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 
-
-au BufNewFile,BufRead *.ejs set filetype=html " Syntax highlighting for ejs
+" Syntax highlighting for ejs
+au BufNewFile,BufRead *.ejs set filetype=html
