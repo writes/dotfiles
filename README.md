@@ -35,11 +35,7 @@ brew link macvim
 
 #### Create directories
 ```
-mkdir ~/.vim && mkdir ~/.vim/bundle && mkdir ~/.vim/bundle/colors && touch ~/.vimrc && touch ~/.bash_aliases && touch ~/.bashrc && touch ~/.vimrc && touch ~/.zshrc
-```
-
-```
-ln -s ~/.vim/bundle/vim-colorschemes/colors ~/.vim/colors
+mkdir ~/.vim && mkdir ~/.vim/bundle && mkdir ~/.vim/bundle/colors && touch ~/.vimrc && touch ~/.bash_aliases && touch ~/.bashrc && touch ~/.vimrc && touch ~/.zshrc && touch ~/.tmux.conf
 ```
 
 #### Install tmux
@@ -55,9 +51,13 @@ brew install rbenv
 rbenv init
 ```
 
-#### Run setup.sh
+#### Run setup.sh and symlink vim theme files
 ```
 cd ~/dotfiles && ./setup.sh
+```
+
+```
+ln -s ~/.vim/bundle/vim-colorschemes/colors ~/.vim/colors
 ```
 
 ## Helpful links/commands
