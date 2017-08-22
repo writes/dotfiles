@@ -7,7 +7,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# export OS_AUTH_URL=%AUTH URL% e.g. https://lon.identity.api.rackspacecloud.com/v2.0/
+# export OS_AUTH_URL=%AUTH URL% 
 # export OS_AUTH_SYSTEM=rackspace_uk
 # export OS_REGION_NAME=%AUTH REGION% e.g. LON
 # export OS_USERNAME=%CLOUD USERNAME%
@@ -22,7 +22,7 @@ export PATH=$HOME/local/bin:$PATH
 export DOCKER_HOST=tcp://localhost:4243
 export DOCKER_TLS_VERIFY="1"
 export DOCKER_HOST="tcp://192.168.99.100:2376"
-export DOCKER_CERT_PATH="/Users/jona8578/.docker/machine/machines/default"
+export DOCKER_CERT_PATH="/Users/writes/.docker/machine/machines/default"
 export DOCKER_MACHINE_NAME="default"
 # Run this command to configure your shell:
 # eval $(docker-machine env default)

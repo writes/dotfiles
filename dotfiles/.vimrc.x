@@ -3,7 +3,7 @@
 " colo distinguished
 " colo atom
 " set background=dark
-" colo cobalt2
+colo cobalt2
 
 set encoding=utf8
 set nocompatible                           " Don't need to keep compatibility with Vi
@@ -120,10 +120,10 @@ call vundle#end()
 " You might not want this, so just leave it out if you dont.
 " let g:syntastic_check_on_open=1
 
-let g:snippets_dir = '~/code/dotfiles/vim/snippets'
-let g:snipMate = {}
-let g:snipMate.scope_aliases = {}
-let g:snipMate.scope_aliases['javascript']  = 'javascript/javascript, javascript/javascript-astrolabe'
+" let g:snippets_dir = '~/code/dotfiles/vim/snippets'
+" let g:snipMate = {}
+" let g:snipMate.scope_aliases = {}
+" let g:snipMate.scope_aliases['javascript']  = 'javascript/javascript, javascript/javascript-astrolabe'
 
 " Nerd Tree Arrows
 let g:NERDTreeDirArrows = 1

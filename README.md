@@ -35,7 +35,7 @@ brew link macvim
 
 #### Create directories
 ```
-mkdir ~/.vim && mkdir ~/.vim/bundle && mkdir ~/.vim/colors && mkdir ~/.vim/bundle/colors && touch ~/.vimrc && touch ~/.bash_aliases && touch ~/.bashrc && touch ~/.vimrc && touch ~/.zshrc 
+mkdir ~/.vim && mkdir ~/.vim/bundle && mkdir ~/.vim/bundle/colors && touch ~/.vimrc && touch ~/.bash_aliases && touch ~/.bashrc && touch ~/.vimrc && touch ~/.zshrc
 ```
 
 ```
