@@ -12,7 +12,7 @@ alias x="exit"
 alias clogs="sudo rm /private/var/log/asl/*.asl"
 
 # Projects Directory
-alias jj="~/Code"
+alias code="~/Code"
 
 # vim
 alias :E="vim -c Explore"
@@ -30,4 +30,12 @@ function trw { tmux rename-window $1; }
 # search running port number
 function r { lsof -i TCP:$1 ; }
 
-
+# Rackspace
+alias ss="cd ~/Projects/signups-ui"
+alias cc="cd ~/Projects/calculator"
+alias jj="cd ~/Projects/www/build/profiles/www"
+alias kk="cd ~/Projects/www/src"
+alias zz="cd ~/Projects/zoolander"
+alias tco="cd ~/Projects/tco"
+alias rr="cd ~/Projects/rackspace-js-lib"
+alias tests="cd ~/Projects/tests"
