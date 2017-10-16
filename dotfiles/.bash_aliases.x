@@ -11,7 +11,7 @@ alias x="exit"
 alias clogs="sudo rm /private/var/log/asl/*.asl"
 
 # Projects Directory
-alias s ="~/Code"
+alias s="cd ~/Code"
 
 # vim
 alias :E="vim -c Explore"
