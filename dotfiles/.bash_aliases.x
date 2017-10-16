@@ -9,6 +9,8 @@ alias ll="ls -laG"
 alias s="cd ~/Writes"
 alias x="exit"
 
+alias clogs="sudo rm /private/var/log/asl/*.asl"
+
 # Projects Directory
 alias jj="~/Code"
 
