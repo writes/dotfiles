@@ -1,6 +1,8 @@
-source ./.bash_aliases_rax.x
-
 export TERM="xterm-256color"
+
+if [ -f ~/.bash_aliases_rax ]; then
+    . ~/.bash_aliases_rax
+fi
 
 # Writes
 alias c="clear"
