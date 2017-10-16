@@ -3,17 +3,15 @@ source ./.bash_aliases_rax.x
 export TERM="xterm-256color"
 
 # Writes
-alias a="cd ~/Projects"
 alias c="clear"
-alias dot="cd ~/dotfiles/dotfiles"
 alias k="kill -9 %1"
 alias ll="ls -laG"
+alias s="cd ~/Writes"
 alias x="exit"
-
-alias clogs="sudo rm /private/var/log/asl/*.asl"
+alias dot="cd ~/dotfiles/dotfiles"
 
 # Projects Directory
-alias s="cd ~/Code"
+alias wh="~/Code"
 
 # vim
 alias :E="vim -c Explore"
