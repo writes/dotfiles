@@ -1,9 +1,4 @@
-" colo luna
-" colo codeschool
-" colo distinguished
-" colo atom
-" set background=dark
-colo cobalt2
+colorscheme cobalt2
 
 set encoding=utf8
 set nocompatible                           " Don't need to keep compatibility with Vi
@@ -26,7 +21,7 @@ set nocp
 
 " Brought in by rec from Powerline"
 set laststatus=2 " Always display the statusline in all windows
-set showtabline=2 " Always display the tabline, even if there is only one tab
+set showtabline=2 "Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
 " Indentation
@@ -49,7 +44,7 @@ set scrolloff=3                            " Keep 3 context lines above and belo
 set backspace=2                            " Allow backspacing over autoindent, EOL, and BOL
 set showmatch                              " Briefly jump to a paren once it's balanced
 set matchtime=2                            " (for only .2 seconds).
-xnoremap p pgvy                            " Persistant clipboard
+xnoremap p pgvy
 
 " Remove whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -96,6 +91,7 @@ filetype plugin indent off
 
 set runtimepath^=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'ericpruitt/tmux.vim', {'rtp': 'vim/'}
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'godlygeek/tabular'
@@ -113,6 +109,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'Valloric/MatchTagAlways'
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 
@@ -142,3 +139,5 @@ command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
 
 " Syntax highlighting for ejs
 au BufNewFile,BufRead *.ejs set filetype=html
+
+syntax enable

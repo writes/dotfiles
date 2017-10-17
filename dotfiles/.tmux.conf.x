@@ -1,3 +1,6 @@
+# run-shell "powerline-daemon -q"
+# source "/Library/Python/2.7/site-packages/powerline/bindings/tmux"
+source ~/.tmux.conf.local
 set-option -g default-shell /bin/zsh
 
 # Enable mouse mode (tmux 2.1 and above)
@@ -6,13 +9,7 @@ set -g mouse on
 # dont rename windows automatically
 set-option -g allow-rename off
 
-set -g @resurrect-strategy-vim "session"
-set -g @tpm_plugins "           \
-  tmux-plugins/tpm              \
-  tmux-plugins/tmux-resurrect   \
-"
-
-run-shell ~/.tmux/plugins/tpm/tpm
+# run-shell ~/.tmux/plugins/tpm/tpm
 
 # remap prefix from 'C-b' to 'C-a'
 unbind C-b
@@ -32,3 +29,4 @@ bind -n M-Up select-pane -U
 bind -n M-Down select-pane -D
 
 TERM=screen-256color
+

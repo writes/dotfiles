@@ -10,6 +10,7 @@ alias dot="cd ~/dotfiles/dotfiles"
 
 # Projects Directory
 alias wh="~/Code"
+alias rr="~/Code/rainbow-road"
 
 # vim
 alias :E="vim -c Explore"

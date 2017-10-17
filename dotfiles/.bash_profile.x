@@ -7,7 +7,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# export OS_AUTH_URL=%AUTH URL% 
+# export OS_AUTH_URL=%AUTH URL%
 # export OS_AUTH_SYSTEM=rackspace_uk
 # export OS_REGION_NAME=%AUTH REGION% e.g. LON
 # export OS_USERNAME=%CLOUD USERNAME%

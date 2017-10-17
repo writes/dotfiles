@@ -1,7 +1,11 @@
 source ~/.bash_profile
 export NODE_PATH='/usr/local/lib/node_modules'
 
-# Add RVM to PATH for scripting
+# Switch to ZSH shell
+# if test -t 1; then
+#  exec zsh
+# fi
+
 PATH=$PATH:$HOME/.rvm/bin
 
 # Require Composer
@@ -33,5 +37,6 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 #    | grep -Eo \"((?:DCXAPPS|EN)[-]\d+)\" | sort | uniq"
 #}
 
-
+export PATH="$PATH:~/Library/Python/2.7/"
 export PATH="$PATH:/Applications/DevDesktop/tools"
+
