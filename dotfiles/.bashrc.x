@@ -35,3 +35,5 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 
 export PATH="$PATH:/Applications/DevDesktop/tools"
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+

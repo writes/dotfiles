@@ -4,6 +4,8 @@ if [ -f ~/.bash_aliases_rax ]; then
     . ~/.bash_aliases_rax
 fi
 
+alias loadnvm="export NVM_DIR="$HOME/.nvm [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 # Writes
 alias c="clear"
 alias k="kill -9 %1"

@@ -53,7 +53,24 @@ bindkey \^U backward-kill-line
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export LC_ALL=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+
+# Original NVM call replaced by the following 8 lines to reduce iterm load time
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+export PATH=$NVM_DIR/versions/node/global/bin:$PATH
+export MANPATH=$NVM_DIR/versions/node/global/share/man:$MANPATH
+nvm() {
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  nvm "${@}"
+}
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+function git_prompt_info() {
+  if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
+          ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
+                          ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
+                  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+                    fi
+            }
