@@ -53,6 +53,11 @@ brew install rbenv
 rbenv init
 ```
 
+#### Install oh-my-zsh
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
 #### Run setup.sh and symlink vim theme files
 ```
 cd ~/dotfiles && ./setup.sh
@@ -69,6 +74,11 @@ ln -s ~/.vim/bundle/vim-colorschemes/colors ~/.vim/colors
 
 [https://github.com/herrbischoff/cobalt2.vim](https://github.com/herrbischoff/cobalt2.vim)
 
+#### Powerline
+[https://github.com/powerline/fonts](https://github.com/herrbischoff/cobalt2.vim)
+
+#### Exa
+[https://the.exa.website/](https://the.exa.website/)
 
 #### Install node
 ```
@@ -79,9 +89,7 @@ brew install node
 ```
 npm install npm@latest -g
 ```
-
-#### Install yarn
-[https://yarnpkg.com/lang/en/docs/install/](https://yarnpkg.com/lang/en/docs/install/)
-
 #### Node version manager (nvm)
-[https://github.com/creationix/nvm](https://github.com/creationix/nvm)
+```
+brew install nvm
+```
