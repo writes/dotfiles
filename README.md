@@ -5,9 +5,6 @@ Various dotfiles that I want to follow me around between machines
 
 Based on John's Dotfile @ https://github.com/SyntaxStacks/dotfiles.git
 
-## iTerm
-[https://www.iterm2.com/downloads.html](https://www.iterm2.com/downloads.html)
-
 ## Installation
 
 #### Clone the repo:
@@ -17,11 +14,16 @@ git clone https://github.com/writes/dotfiles.git
 
 #### Install Homebrew
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 ```
 export PATH=/usr/local/bin:$PATH
+```
+
+## iTerm
+```
+brew cask install iterm2
 ```
 
 #### Install vim
@@ -30,17 +32,17 @@ brew install vim && macvim
 ```
 
 ```
+brew unlink vim
+```
+
+```
 brew link macvim
 ```
 
 #### Create directories
 ```
-mkdir ~/.vim && mkdir ~/.vim/bundle && mkdir ~/.vim/bundle/colors && touch ~/.vimrc && touch ~/.bash_aliases && touch ~/.bashrc && touch ~/.vimrc && touch ~/.zshrc && touch ~/.tmux.conf
+mkdir ~/.vim && mkdir ~/.vim/bundle && mkdir ~/.vim/bundle/colors && touch ~/.vimrc && touch ~/.bash_aliases && touch ~/.bashrc && touch ~/.vimrc && touch ~/.zshrc
 ```
-
-#### Install tmux
-
-[https://github.com/tmux/tmux](https://github.com/tmux/tmux)
 
 #### Install rbenv
 ```
